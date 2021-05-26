@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');  // Import montserrat font
+@import 'home';
+
+// Default CSS for blank canvas start
+* {
+    font-family: 'Montserrat', sans-serif;
+    //font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    //text-decoration: none !important;       // Bootstrap needs !important to remove link underline on hover */
+}
+
+// Apply border-box as default: https://css-tricks.com/international-box-sizing-awareness-day/
+// https://css-tricks.com/box-sizing/
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;        // Smooth scroll for anchor links: https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/
+
+    // For firefox scrollbar styling
+    scrollbar-color: color(raisin_black) color(background);
+    scrollbar-width: thin !important;
+
+    // For other browsers scrollbar styling
+    /* &::-webkit-scrollbar {
+        width: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: color(background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: color(raisin_black);
+    } */
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+// Change blue hyperlink color to its parent color
+a, a:hover {
+    color: inherit;
+}
+
+
+body {
+    background: rgb(54,217,182);
+    background: linear-gradient( 90deg, rgba(54,217, 182,1) 0%, rgba(32,152,126,1) 43%, rgba(0,212,255,1) 100% );
+}

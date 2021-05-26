@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}   <!-- Load images: https://docs.djangoproject.com/en/3.0/howto/static-files/ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"> -->
+
+    <!-- If statement to check if a title object was passed from the views.py -->
+    {% if title %}
+        <title>{{ title }} - To Do</title>
+    {% else %}
+        <title>To Do</title>
+    {% endif %}
+</head>
+<body>
+
+    <div class="container">
+        <div id="task-container">
+            
+            <div id="form-wrapper">
+                <form id="form">
+                    <div class="flex-wrapper">
+                        <div style="flex: 6">
+                            <input id="title" class="form-control" type="text" name="title" placeholder="Add task">
+                        </div>
+
+                        <div style="flex: 1">
+                            <input id="submit" class="btn" type="submit">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div id="list-wrapper">
+                <!-- buildList in jetch_data.js loops through data in api and adds items here -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Import JS -->
+    <script src="{% static 'frontend/js/fetch_data.js' %}"></script>
+
+</body>
+</html>
