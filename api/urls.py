@@ -1,3 +1,5 @@
+"""Big thans to Dennis Ivy."""
+
 from django.urls import path
 from . import views
 
