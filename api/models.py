@@ -1,3 +1,5 @@
+"""Thanks to Dennis Ivy for this tutorial."""
+
 from django.db import models
 
 
