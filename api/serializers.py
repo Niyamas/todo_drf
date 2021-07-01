@@ -1,3 +1,5 @@
+"""Inspiration by Dennis Ivy."""
+
 # Turn data to JSON for use in views.py
 # Similar to forms.py
 
