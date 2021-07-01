@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}       <!-- Remove after removing article images -->
+
+
+{% block body_class %}template-homepage{% endblock %}
+
+
+{% block extra_css %}
+
+<!-- Import CSS -->
+<link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
+
+{% endblock extra_css %}
+
+
+{% block head_js %}
+{% endblock head_js %}
+
+
+{% block content %}
+
+<div class="container">
+    <div id="task-container">
+        
+        <div id="form-wrapper">
+            <form id="form">
+                <div class="flex-wrapper">
+                    <div style="flex: 6">
+                        <input id="title" class="form-control" type="text" name="title" placeholder="Add task">
+                    </div>
+
+                    <div style="flex: 1">
+                        <input id="submit" class="btn" type="submit">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div id="list-wrapper">
+            <!-- buildList in jetch_data.js loops through data in api and adds items here -->
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{% block extra_js %}
+
+<script src="{% static 'frontend/js/fetch_data.js' %}"></script>
+
+{% endblock extra_js %}
